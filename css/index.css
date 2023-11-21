@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #08070b;
+  --very-dark-grey: #18171f;
+  --dark-grey: #24232c;
+  --grey: #817d92;
+  --almost-white: #e6e5ea;
+  --neon-green: #a4ffaf;
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("../assets/fonts/static/JetBrainsMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("../assets/fonts/static/JetBrainsMono-BoldItalic.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+}
+
+h1 {
+  font-family: "JetBrainsMono", sans-serif;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: var(--almost-white);
+}
+
+h2 {
+  font-family: "JetBrainsMono", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--grey);
+}
+
+label,
+p {
+  font-family: "JetBrainsMono", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.125;
+  line-height: 150%;
+  color: var(--almost-white);
+}
+
+button {
+  width: 100%;
+  min-height: 65px;
+  padding: 24px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neon-green);
+}
+
+button p {
+  color: var(--dark-grey);
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid var(--neon-green);
+}
+button:hover p {
+  color: var(--neon-green);
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 8px; /* Specified height */
+  background-color: var(--very-dark-grey);
+  outline: none; /* Remove outline */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--almost-white); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

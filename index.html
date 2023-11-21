@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="password-container">
+        <h2>Password Generator</h2>
+        <div class="card">
+          <div class="row-between">
+            <h1>PTx1f5DaFX</h1>
+            <img src="/assets/images/icon-copy.svg" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="row-between">
+            <p>Character Length</p>
+            <h2 style="color: var(--neon-green)">10</h2>
+          </div>
+          <input type="range" min="1" max="100" value="10" class="slider" />
+          <form class="form-container">
+            <div class="row">
+              <input type="checkbox" class="checkbox" />
+              <label>Include Upperase Letters</label>
+            </div>
+            <div class="row">
+              <input type="checkbox" class="checkbox" />
+              <label>Include Lowercase Letters</label>
+            </div>
+            <div class="row">
+              <input type="checkbox" class="checkbox" />
+              <label>Include Numbers</label>
+            </div>
+            <div class="row">
+              <input type="checkbox" class="checkbox" />
+              <label>Include Symbols</label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
