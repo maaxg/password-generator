@@ -54,20 +54,22 @@ p {
   font-family: "JetBrainsMono", sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.125;
+  font-size: 1.125rem;
   line-height: 150%;
   color: var(--almost-white);
 }
 
 button {
   width: 100%;
-  min-height: 65px;
-  padding: 24px;
+  min-height: 56px;
+  padding: 12px;
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
   background-color: var(--neon-green);
+  outline: none;
+  border-width: 0;
 }
 
 button p {
@@ -99,4 +101,38 @@ button:hover p {
   border-radius: 50%;
   background-color: var(--almost-white); /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: transparent;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: transparent;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--almost-white);
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: url("/assets/images/icon-check.svg");
+  margin-top: 4px;
+  background-repeat: no-repeat;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+input[type="checkbox"]:checked {
+  background-color: var(--neon-green);
+  border: 0.15em solid var(--neon-green);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }

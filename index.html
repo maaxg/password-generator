@@ -33,22 +33,42 @@
           </div>
           <input type="range" min="1" max="100" value="10" class="slider" />
           <form class="form-container">
-            <div class="row">
+            <div class="row checkbox-container">
               <input type="checkbox" class="checkbox" />
               <label>Include Upperase Letters</label>
             </div>
-            <div class="row">
+            <div class="row checkbox-container">
               <input type="checkbox" class="checkbox" />
               <label>Include Lowercase Letters</label>
             </div>
-            <div class="row">
+            <div class="row checkbox-container">
               <input type="checkbox" class="checkbox" />
               <label>Include Numbers</label>
             </div>
-            <div class="row">
+            <div class="row checkbox-container">
               <input type="checkbox" class="checkbox" />
               <label>Include Symbols</label>
             </div>
+
+            <div class="strength-container">
+              <p style="color: var(--grey)">STRENGTH</p>
+              <div class="strength-container-level">
+                <p id="strength-level" style="margin-right: 8px">MEDIUM</p>
+                <div class="row" style="column-gap: 8px">
+                  <span
+                    id="strength-bar"
+                    class="strength-bar strength-bar-too-weak"
+                  ></span>
+                  <span id="strength-bar" class="strength-bar"></span>
+                  <span id="strength-bar" class="strength-bar"></span>
+                  <span id="strength-bar" class="strength-bar"></span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="generate-button">
+              <p>GENERATE</p>
+              <img src="/assets/images/icon-arrow-right.svg" />
+            </button>
           </form>
         </div>
       </section>

@@ -1,6 +1,7 @@
 main {
   background-color: var(--bg-color);
 }
+
 .password-container {
   display: flex;
   flex-direction: column;
@@ -25,14 +26,17 @@ main {
   flex-direction: column;
   width: 100%;
   row-gap: 8px;
+  margin-top: 30px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap: 20px;
   width: 100%;
+}
+.checkbox-container {
+  column-gap: 20px;
 }
 
 .row-between {
@@ -40,4 +44,51 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+
+.generate-button {
+  column-gap: 8px;
+  margin-top: 16px;
+}
+
+.strength-container {
+  display: flex;
+  margin-top: 30px;
+  background-color: var(--very-dark-grey);
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strength-container-level {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+
+.strength-bar {
+  border: solid 2px var(--almost-white);
+  height: 28px;
+  width: 10px;
+}
+
+.strength-bar-too-weak {
+  background-color: var(--red);
+  border: solid 2px var(--red);
+}
+
+.strength-bar-weak {
+  background-color: var(--orange);
+  border: solid 2px var(--orange);
+}
+
+.strength-bar-medium {
+  background-color: var(--yellow);
+  border: solid 2px var(--yellow);
+}
+
+.strength-bar-medium {
+  background-color: var(--neon-green);
+  border: solid 2px var(--neon-green);
 }
