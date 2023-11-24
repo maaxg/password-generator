@@ -22,38 +22,47 @@
         <h2>Password Generator</h2>
         <div class="card">
           <div class="row-between">
-            <h1>PTx1f5DaFX</h1>
-            <img src="/assets/images/icon-copy.svg" />
+            <h1 id="password">YOUR PASSWORD</h1>
+            <a id="copy-password">
+              <img src="/assets/images/icon-copy.svg" />
+            </a>
           </div>
         </div>
         <div class="card">
           <div class="row-between">
             <p>Character Length</p>
-            <h2 style="color: var(--neon-green)">10</h2>
+            <h2 id="character-length" style="color: var(--neon-green)">10</h2>
           </div>
-          <input type="range" min="1" max="100" value="10" class="slider" />
-          <form class="form-container">
+          <input
+            id="slider"
+            type="range"
+            min="1"
+            max="100"
+            value="10"
+            class="slider"
+          />
+          <form id="form" class="form-container">
             <div class="row checkbox-container">
-              <input type="checkbox" class="checkbox" />
+              <input id="upper-case" type="checkbox" class="checkbox" />
               <label>Include Upperase Letters</label>
             </div>
             <div class="row checkbox-container">
-              <input type="checkbox" class="checkbox" />
+              <input id="lower-case" type="checkbox" class="checkbox" />
               <label>Include Lowercase Letters</label>
             </div>
             <div class="row checkbox-container">
-              <input type="checkbox" class="checkbox" />
+              <input id="numbers" type="checkbox" class="checkbox" />
               <label>Include Numbers</label>
             </div>
             <div class="row checkbox-container">
-              <input type="checkbox" class="checkbox" />
+              <input id="symbols" type="checkbox" class="checkbox" />
               <label>Include Symbols</label>
             </div>
 
             <div class="strength-container">
               <p style="color: var(--grey)">STRENGTH</p>
               <div class="strength-container-level">
-                <p id="strength-level" style="margin-right: 8px">MEDIUM</p>
+                <p id="strength-level" style="margin-right: 8px">TOO WEAK</p>
                 <div class="row" style="column-gap: 8px">
                   <span
                     id="strength-bar"
@@ -73,5 +82,6 @@
         </div>
       </section>
     </main>
+    <script src="/js/home.js"></script>
   </body>
 </html>

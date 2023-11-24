@@ -1,5 +1,7 @@
 main {
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
 }
 
 .password-container {
@@ -10,6 +12,8 @@ main {
   height: 100dvh;
   padding: 32px;
   row-gap: 16px;
+  max-width: 520px;
+
 }
 
 .card {
@@ -88,7 +92,12 @@ main {
   border: solid 2px var(--yellow);
 }
 
-.strength-bar-medium {
+.strength-bar-strong {
   background-color: var(--neon-green);
   border: solid 2px var(--neon-green);
 }
+
+#password {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;

@@ -84,24 +84,44 @@ button:hover p {
   color: var(--neon-green);
 }
 
-.slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 8px; /* Specified height */
+/* Chrome */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    overflow-y: hidden;
+    width: 100%;
+    height: 8px;
+    background-color: var(--very-dark-grey);
+    z-index: 1;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 8px;
+    cursor: ew-resize;
+    background: var(--almost-white);
+    box-shadow: -320px 0 0 320px var(--neon-green);
+  }
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: var(--neon-green);
+}
+input[type="range"]::-moz-range-track {
   background-color: var(--very-dark-grey);
-  outline: none; /* Remove outline */
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: var(--neon-green);
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: var(--very-dark-grey);
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--almost-white); /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
 input[type="checkbox"] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
