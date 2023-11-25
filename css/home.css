@@ -2,6 +2,7 @@ main {
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .password-container {
@@ -13,7 +14,6 @@ main {
   padding: 32px;
   row-gap: 16px;
   max-width: 520px;
-
 }
 
 .card {
@@ -101,3 +101,4 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
